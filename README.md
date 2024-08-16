@@ -45,3 +45,4 @@ Licença
 Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais informações.
 >>>>>>> 9331bae (Primeiro commit)
 # Gerador_Orcamento_Email
+# Gerador_Orcamento_Email
