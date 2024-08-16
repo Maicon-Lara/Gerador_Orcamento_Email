@@ -1,39 +1,66 @@
-Gerador de Orçamento com Streamlit e Outlook
-Este projeto é uma aplicação web que permite ao usuário preencher um formulário para gerar um orçamento. O orçamento pode ser salvo como um arquivo PDF e também pode ser enviado por e-mail usando o Outlook.
-
-Funcionalidades
-Geração de Orçamento: O usuário pode preencher um formulário com informações sobre o orçamento, como nome, endereço, telefone, e-mail, descrição do projeto, horas estimadas, valor da hora trabalhada e prazo.
-Salvamento em PDF: O orçamento gerado pode ser salvo como um arquivo PDF.
-Envio por E-mail: O orçamento pode ser enviado por e-mail usando o Outlook, incluindo a assinatura configurada no Outlook.
-Pré-requisitos
-Python 3.x
-Bibliotecas Python: streamlit, win32com.client, fpdf, os, tkinter, markdown
-Instalação
-Clone o repositório:
-
-
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
-Instale as dependências:
-
-
-pip install -r requirements.txt
-Uso
-Execute o script principal:
-
-
-streamlit run main.py
-Abra o navegador e acesse a URL fornecida pelo Streamlit (geralmente http://localhost:8501).
-
-Preencha o formulário com as informações do orçamento.
-
-Clique no botão "Gerar Orçamento" para gerar o orçamento e salvar como PDF.
-
-Clique no botão "Enviar Orçamento por E-mail" para enviar o orçamento por e-mail usando o Outlook.
-
-
-Contribuição
-Contribuições são bem-vindas! Por favor, abra uma issue ou envie um pull request para sugerir melhorias ou corrigir problemas.
-
-Licença
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+<h1>Gerador de Orçamento com Streamlit e Outlook</h1>
+<p>Este projeto é uma aplicação web que permite ao usuário preencher um formulário para gerar um orçamento. O orçamento pode ser salvo como um arquivo PDF e também pode ser enviado por e-mail usando o Outlook.</p>
+<h2>Funcionalidades</h2>
+<ul>
+<li><strong>Geração de Orçamento</strong>: O usuário pode preencher um formulário com informações sobre o orçamento, como nome, endereço, telefone, e-mail, descrição do projeto, horas estimadas, valor da hora trabalhada e prazo.</li>
+<li><strong>Salvamento em PDF</strong>: O orçamento gerado pode ser salvo como um arquivo PDF.</li>
+<li><strong>Envio por E-mail</strong>: O orçamento pode ser enviado por e-mail usando o Outlook, incluindo a assinatura configurada no Outlook.</li>
+</ul>
+<h2>Pré-requisitos</h2>
+<ul>
+<li>Python 3.x</li>
+<li>Bibliotecas Python: <code class="" node="[object Object]">streamlit</code>, <code class="" node="[object Object]">win32com.client</code>, <code class="" node="[object Object]">fpdf</code>, <code class="" node="[object Object]">os</code>, <code class="" node="[object Object]">tkinter</code>, <code class="" node="[object Object]">markdown</code></li>
+</ul>
+<h2>Instalação</h2>
+<ol>
+<li>
+<p>Clone o repositório:</p>
+<pre><div class="relative rounded-md"><button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-auto disabled:opacity-50 hover:text-accent-foreground absolute right-2 top-2 h-6 w-6 rounded-full p-0 text-muted-foreground hover:bg-accent" aria-label="Copy code to clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy h-4 w-4"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><div node="[object Object]" class="rounded-md" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;background:#1e1e1e"><code class="language-bash" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="token" style="color:#dcdcaa">git</span><span> clone git@github.com:Maicon-Lara/Gerador_Orcamento_Email.git
+</span><span></span><span class="token" style="color:#4ec9b0">cd</span><span> Gerador_Orcamento_Email.git</span></code></div></div></pre>
+</li>
+<li>
+<p>Instale as dependências:</p>
+<pre><div class="relative rounded-md"><button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-auto disabled:opacity-50 hover:text-accent-foreground absolute right-2 top-2 h-6 w-6 rounded-full p-0 text-muted-foreground hover:bg-accent" aria-label="Copy code to clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy h-4 w-4"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><div node="[object Object]" class="rounded-md" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;background:#1e1e1e"><code class="language-bash" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span>pip </span><span class="token" style="color:#dcdcaa">install</span><span> streamlit</span></code></div></div></pre>
+<pre><div class="relative rounded-md"><button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-auto disabled:opacity-50 hover:text-accent-foreground absolute right-2 top-2 h-6 w-6 rounded-full p-0 text-muted-foreground hover:bg-accent" aria-label="Copy code to clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy h-4 w-4"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><div node="[object Object]" class="rounded-md" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;background:#1e1e1e"><code class="language-bash" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span>pip </span><span class="token" style="color:#dcdcaa">install</span><span> win32com</span></code></div></div></pre>
+<pre><div class="relative rounded-md"><button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-auto disabled:opacity-50 hover:text-accent-foreground absolute right-2 top-2 h-6 w-6 rounded-full p-0 text-muted-foreground hover:bg-accent" aria-label="Copy code to clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy h-4 w-4"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><div node="[object Object]" class="rounded-md" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;background:#1e1e1e"><code class="language-bash" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span>pip </span><span class="token" style="color:#dcdcaa">install</span><span> fpdf</span></code></div></div></pre>
+<pre><div class="relative rounded-md"><button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-auto disabled:opacity-50 hover:text-accent-foreground absolute right-2 top-2 h-6 w-6 rounded-full p-0 text-muted-foreground hover:bg-accent" aria-label="Copy code to clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy h-4 w-4"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><div node="[object Object]" class="rounded-md" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;background:#1e1e1e"><code class="language-bash" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span>pip </span><span class="token" style="color:#dcdcaa">install</span><span> tkinter</span></code></div></div></pre>
+<pre><div class="relative rounded-md"><button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-auto disabled:opacity-50 hover:text-accent-foreground absolute right-2 top-2 h-6 w-6 rounded-full p-0 text-muted-foreground hover:bg-accent" aria-label="Copy code to clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy h-4 w-4"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><div node="[object Object]" class="rounded-md" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;background:#1e1e1e"><code class="language-bash" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span>pip </span><span class="token" style="color:#dcdcaa">install</span><span> markdown</span></code></div></div></pre>
+</li>
+</ol>
+<h2>Uso</h2>
+<ol>
+<li>
+<p>Execute o script principal:</p>
+<pre><div class="relative rounded-md"><button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-auto disabled:opacity-50 hover:text-accent-foreground absolute right-2 top-2 h-6 w-6 rounded-full p-0 text-muted-foreground hover:bg-accent" aria-label="Copy code to clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy h-4 w-4"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><div node="[object Object]" class="rounded-md" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:.5em 0;overflow:auto;background:#1e1e1e"><code class="language-bash" style="color:#d4d4d4;font-size:13px;text-shadow:none;font-family:Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, &quot;Courier New&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span>streamlit run Gerador_Orcamento.py</span></code></div></div></pre>
+</li>
+<li>
+<p>Abra o navegador e acesse a URL fornecida pelo Streamlit (geralmente <code class="" node="[object Object]">http://localhost:8501</code>).</p>
+</li>
+<li>
+<p>Preencha o formulário com as informações do orçamento.</p>
+</li>
+<li>
+<p>Clique no botão &quot;Gerar Orçamento&quot; para gerar o orçamento e salvar como PDF.</p>
+</li>
+<li>
+<p>Clique no botão &quot;Enviar Orçamento por E-mail&quot; para enviar o orçamento por e-mail usando o Outlook.</p>
+</li>
+</ol>
+<h2>Funções Principais</h2>
+<h3><code class="" node="[object Object]">selecionar_caminho_pdf()</code></h3>
+<p>Abre uma janela de diálogo para selecionar o local onde o arquivo PDF será salvo.</p>
+<h3><code class="" node="[object Object]">validar_campos()</code></h3>
+<p>Valida os campos de entrada do formulário para garantir que todos os campos foram preenchidos corretamente e que as horas estimadas e o valor da hora são números.</p>
+<h3><code class="" node="[object Object]">gerar_conteudo_orcamento()</code></h3>
+<p>Gera o conteúdo do orçamento com base nas informações fornecidas pelo usuário.</p>
+<h3><code class="" node="[object Object]">gerar_pdf()</code></h3>
+<p>Gera um arquivo PDF com o conteúdo do orçamento.</p>
+<h3><code class="" node="[object Object]">enviar_email()</code></h3>
+<p>Envia o orçamento por e-mail usando o Outlook, incluindo a assinatura configurada no Outlook. A descrição do orçamento é convertida para HTML para permitir formatação.</p>
+<h3><code class="" node="[object Object]">main()</code></h3>
+<p>Função principal que configura a interface do usuário usando Streamlit, processa os dados do formulário e chama as funções para gerar o PDF e enviar o e-mail.</p>
+<h2>Contribuição</h2>
+<p>Contribuições são bem-vindas! Por favor, abra uma issue ou envie um pull request para sugerir melhorias ou corrigir problemas.</p>
+<h2>Licença</h2>
+<p>Este projeto está licenciado sob a Licença MIT. Veja o arquivo <a href="LICENSE">LICENSE</a> para mais detalhes.</p>
+<hr/>
