@@ -1,45 +1,39 @@
-# Gerador de Orçamento
-=====================
+Gerador de Orçamento com Streamlit e Outlook
+Este projeto é uma aplicação web que permite ao usuário preencher um formulário para gerar um orçamento. O orçamento pode ser salvo como um arquivo PDF e também pode ser enviado por e-mail usando o Outlook.
 
-Este projeto é um aplicativo web que permite gerar orçamentos personalizados e enviá-los por e-mail. Foi desenvolvido utilizando a biblioteca Streamlit para a interface gráfica e a biblioteca FPDF para gerar os orçamentos em formato PDF.
 Funcionalidades
----------------
-
-* Gerar orçamentos personalizados com informações do cliente, projeto, horas estimadas, valor da hora trabalhada e prazo;
-* Salvar os orçamentos em formato PDF;
-* Enviar os orçamentos por e-mail para o cliente.
-
-Requisitos
-------------
-
-* Python 3.8 ou superior;
-* Bibliotecas Streamlit, FPDF, win32com e tkinter instaladas;
-* Cliente de e-mail configurado no sistema (por exemplo, Outlook).
-
+Geração de Orçamento: O usuário pode preencher um formulário com informações sobre o orçamento, como nome, endereço, telefone, e-mail, descrição do projeto, horas estimadas, valor da hora trabalhada e prazo.
+Salvamento em PDF: O orçamento gerado pode ser salvo como um arquivo PDF.
+Envio por E-mail: O orçamento pode ser enviado por e-mail usando o Outlook, incluindo a assinatura configurada no Outlook.
+Pré-requisitos
+Python 3.x
+Bibliotecas Python: streamlit, win32com.client, fpdf, os, tkinter, markdown
 Instalação
-------------
+Clone o repositório:
 
-1. Clone o repositório do projeto;
-2. Instale as bibliotecas necessárias utilizando pip: pip install streamlit fpdf win32com tkinter;
-3. Execute o arquivo main.py para iniciar o aplicativo.
 
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+Instale as dependências:
+
+
+pip install -r requirements.txt
 Uso
-----
+Execute o script principal:
 
-1. Abra o aplicativo em um navegador web: `http://localhost:8501`
-2. Preencha os campos do formulário com as informações do cliente e do projeto;
-3. Clique no botão "Gerar Orçamento" para gerar o orçamento em formato PDF;
-4. Clique no botão "Enviar Orçamento por E-mail" para enviar o orçamento para o cliente.
 
-Contribuições
----------------------
+streamlit run main.py
+Abra o navegador e acesse a URL fornecida pelo Streamlit (geralmente http://localhost:8501).
 
-Contribuições são bem-vindas! Se você tiver alguma sugestão ou encontrar algum erro, por favor, abra uma issue ou envie um pull request.
+Preencha o formulário com as informações do orçamento.
+
+Clique no botão "Gerar Orçamento" para gerar o orçamento e salvar como PDF.
+
+Clique no botão "Enviar Orçamento por E-mail" para enviar o orçamento por e-mail usando o Outlook.
+
+
+Contribuição
+Contribuições são bem-vindas! Por favor, abra uma issue ou envie um pull request para sugerir melhorias ou corrigir problemas.
 
 Licença
---------
-
-Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais informações.
->>>>>>> 9331bae (Primeiro commit)
-# Gerador_Orcamento_Email
-
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
