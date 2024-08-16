@@ -1,5 +1,5 @@
 <h1>Gerador de Orçamento com Streamlit e Outlook</h1>
-<p>Este projeto é uma aplicação web que permite ao usuário preencher um formulário para gerar um orçamento. O orçamento pode ser salvo como um arquivo PDF e também pode ser enviado por e-mail usando o aplicatico do Outlook.</p>
+<p>Este projeto é uma aplicação web que permite ao usuário preencher um formulário para gerar um orçamento. O orçamento pode ser salvo como um arquivo PDF e também pode ser enviado por e-mail usando o aplicativo do Outlook.</p>
 <h2>Funcionalidades</h2>
 <ul>
 <li><strong>Geração de Orçamento</strong>: O usuário pode preencher um formulário com informações sobre o orçamento, como nome, endereço, telefone, e-mail, descrição do projeto, horas estimadas, valor da hora trabalhada e prazo.</li>
