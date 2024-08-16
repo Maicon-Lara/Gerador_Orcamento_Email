@@ -4,7 +4,6 @@ from fpdf import FPDF
 import os
 import tkinter as tk
 from tkinter import filedialog
-import markdown
 
 # Função para abrir a janela de diálogo de salvamento
 def selecionar_caminho_pdf():
@@ -68,25 +67,12 @@ def gerar_pdf(caminho_pdf, orcamento):
 
 # Função para enviar o e-mail com o PDF anexado
 def enviar_email(email_destinatario, projeto, descricao, caminho_pdf):
-    # Converter a descrição em HTML
-    descricao_html = markdown.markdown(descricao)
-
     try:
         outlook = win32.Dispatch('outlook.application')
         mail = outlook.CreateItem(0)
         mail.To = email_destinatario
         mail.Subject = projeto
-
-        # Adiciona o conteúdo do e-mail antes da assinatura
-        mail.HTMLBody = f"""
-        <html>
-        <body>
-            <h2>Orçamento para o Projeto: {projeto}</h2>
-            <p>{descricao_html}</p>
-            <p>{mail.HTMLBody}</p>
-        </body>
-        </html>
-        """
+        mail.HTMLBody = descricao
 
         if os.path.isfile(caminho_pdf):
             try:
